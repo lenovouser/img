@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Upload
+  </div>
+  <div class="panel-body">
+    <p>Please select your image and press upload.</p>
+    <%= form_for @image, :html => { :multipart => true } do |f| %>
+      <p>
+        <%= f.file_field :image %>
+      </p>
+      <p>
+        <%= f.submit 'Upload', :class => 'btn btn-primary' %>
+      </p>
+    <% end %>
+  </div>
+</div>

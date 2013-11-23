@@ -1,0 +1,18 @@
+<%= link_to @image.image.url, :class => 'thumbnail' do %>
+  <%= image_tag @image.image.url :medium %>
+<% end %>
+
+<table class="table">
+  <tr>
+    <th>Uploaded</th>
+    <td><%= l @image.created_at %>
+  </tr>
+  <tr>
+    <th>Permalink</th>
+    <td><%= image_url(@image.token) %></td>
+  </tr>
+  <tr>
+    <th>Directlink</th>
+    <td><%= absolute_attachment_url(@image.image) %></td>
+  </tr>
+</table>

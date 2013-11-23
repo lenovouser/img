@@ -1,0 +1,19 @@
+devise:
+  secret_key: your_secret_key
+  mailer_sender: mail@example.com
+capistrano:
+  repo_url: git@github.com:yourfork/img.git
+  user: deploy
+  use_sudo: true
+  deploy_to: /www/img.example.com
+  production:
+    roles:
+      app:
+        - app01.example.com
+        - app02.example.com
+        - app03.example.com
+      web:
+        - web01.example.com
+        - web02.example.com
+      db:
+        - db01.example.com
