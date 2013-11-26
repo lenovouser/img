@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.1'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -41,7 +41,7 @@ end
 # Use Capistrano for deployment
 group :development do
   gem 'capistrano', '~> 3.0.0'
-  gem 'capistrano-rvm', '~> 0.0.3'
+  gem 'capistrano-rvm'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
 end

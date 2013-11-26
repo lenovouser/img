@@ -1,5 +1,7 @@
 # IMG
 
+[![Dependency Status](https://gemnasium.com/klausmeyer/img.png)](https://gemnasium.com/klausmeyer/img)
+
 This rails application can be used for running a self-hosted image-upload-service.
 
 It's based on the following 3rd-party components:
