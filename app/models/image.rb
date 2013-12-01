@@ -1,5 +1,7 @@
 class Image < ActiveRecord::Base
 
+  belongs_to :session, :class_name => "ActiveRecord::SessionStore::Session"
+
   has_attached_file :image, :styles => { :medium => "800x", :thumb => "200x" }, :url => "/images/:hash.:extension", :hash_secret => "0xDECAFBAD"
 
   after_create :generate_token

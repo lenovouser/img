@@ -6,11 +6,52 @@
     <p>Please select your image and press upload.</p>
     <%= form_for @image, :html => { :multipart => true } do |f| %>
       <p>
-        <%= f.file_field :image %>
-      </p>
-      <p>
-        <%= f.submit 'Upload', :class => 'btn btn-primary' %>
+        <%= f.file_field :image, :multiple => true, :name => "image[image]" %>
       </p>
     <% end %>
   </div>
 </div>
+
+<h2>My Uploads</h2>
+
+<table id="uploads_table" class="table table-striped">
+  <thead>
+    <tr>
+      <th>Thumbnail</th>
+      <th>Filename</th>
+      <th>Progress</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @images.any? %>
+      <% @images.each do |image| %>
+        <tr>
+          <td><%= image_tag image.image.url(:thumb) %></td>
+          <td><%= image.image_file_name %></td>
+          <td class="upload">
+            <div class="progress"><div class="bar" style="width: 100%;"></div></div>
+          </td>
+          <td><%= link_to 'show', image %></td>
+        </tr>    
+      <% end %>
+    <% else %>
+      <tr id="placeholder">
+        <td colspan="4">
+          no uploads yet
+        </td>
+      </tr>
+    <% end %>
+  </tobody>
+</table>
+
+<script id="template-upload" type="text/x-tmpl">
+  <tr>
+    <td class="preview">-</td>
+    <td>{%= o.name %}</td>
+    <td class="upload">
+      <div class="progress"><div class="bar" style="width: 0%;"></div></div>
+    </td>
+    <td class="link">-</td>
+  </tr>
+</script>

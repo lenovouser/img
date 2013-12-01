@@ -47,13 +47,16 @@ group :development do
 end
 
 group :development, :test do
-  gem 'debugger'
+  #gem 'debugger'
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails', '~> 4.3.0'
 end
 
-gem "paperclip", '~> 3.0'
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
+gem 'paperclip', '~> 3.0'
 gem 'bootstrap-sass'
+gem 'jquery-fileupload-rails'
 
 gem 'rmagick', :require => false
 gem 'execjs'

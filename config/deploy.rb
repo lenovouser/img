@@ -4,6 +4,7 @@ APP_CONFIG = YAML.load(File.read(File.expand_path('../app_config.yml', __FILE__)
 
 set :application, 'img'
 set :repo_url, APP_CONFIG['capistrano']['repo_url']
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 set :user, APP_CONFIG['capistrano']['user']
 set :use_sudo, APP_CONFIG['capistrano']['use_sudo']
