@@ -13,18 +13,10 @@ set :deploy_to, APP_CONFIG['capistrano']['deploy_to']
 set :linked_files, %w(config/database.yml config/app_config.yml)
 set :linked_dirs, (fetch(:linked_dirs) || []) + %w{public/images}
 
-set :rvm_ruby_version, 'ruby-2.1.0@img'
+set :rvm_ruby_version, 'ruby-2.1.1@img'
 
 namespace :deploy do
 
-  desc 'Restart application'
-  task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute :touch, release_path.join('tmp/restart.txt')
-    end
-  end
-
  after :finishing, 'deploy:cleanup'
- after 'deploy:publishing', 'deploy:restart'
 
 end
