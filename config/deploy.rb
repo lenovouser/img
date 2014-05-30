@@ -13,7 +13,7 @@ set :deploy_to, APP_CONFIG['capistrano']['deploy_to']
 set :linked_files, %w(config/database.yml config/app_config.yml)
 set :linked_dirs, (fetch(:linked_dirs) || []) + %w{public/images}
 
-set :rvm_ruby_version, 'ruby-2.1.1@img'
+set :rvm_ruby_version, 'ruby-2.1.2@img'
 
 namespace :deploy do
 

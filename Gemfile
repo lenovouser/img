@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.1'
+gem 'rails', '4.1.2.rc1'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -47,7 +47,7 @@ group :development do
 end
 
 group :development, :test do
-  #gem 'debugger'
+  gem 'debugger', github: 'klausmeyer/debugger', branch: 'support_212'
   gem 'rspec-rails', '~> 2.0'
   gem 'factory_girl_rails', '~> 4.4.0'
 end
