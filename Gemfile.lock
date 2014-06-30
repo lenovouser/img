@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/activerecord-hackery/ransack.git
-  revision: f0dcf402e9ad1685a48983b5f16a07d00699509d
+  revision: 625e58cbb5ea5e155464ea2d79497838313352f2
   branch: rails-4.1
   specs:
     ransack (1.2.4)
@@ -19,14 +19,14 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 67fab47afb74b1205f078df83ab5e0542286896f
+  revision: 0e0b3694bace985f355135f9628ea7918c3695d2
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
       bourbon
       coffee-rails
       formtastic (~> 2.3.0.rc3)
-      inherited_resources (~> 1.3)
+      inherited_resources (~> 1.4.1)
       jquery-rails
       jquery-ui-rails
       kaminari (~> 0.15)
@@ -36,24 +36,14 @@ GIT
 
 GIT
   remote: git://github.com/justinfrench/formtastic.git
-  revision: 1bdf6d3642af52a1a62902f12b844a5856d0254e
+  revision: ee69d3355bd443d40472147a2d087ed4a5b5af9b
   specs:
     formtastic (2.3.0.rc3)
       actionpack (>= 3.2.13)
 
 GIT
-  remote: git://github.com/klausmeyer/debugger.git
-  revision: ca451a9bdfc6569b7aca6c0f58468a13cad3759f
-  branch: support_212
-  specs:
-    debugger (1.6.6)
-      columnize (>= 0.3.1)
-      debugger-linecache (~> 1.2.0)
-      debugger-ruby_core_source (~> 1.3.4)
-
-GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: 40068c4cba071edaa5acfb23df3192a932ce3c09
+  revision: 50679e1d93a13d3111b92a929ac1f62d65338e29
   specs:
     devise (3.2.4)
       bcrypt (~> 3.0)
@@ -74,27 +64,27 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.1.2.rc1)
-      actionpack (= 4.1.2.rc1)
-      actionview (= 4.1.2.rc1)
+    actionmailer (4.1.2)
+      actionpack (= 4.1.2)
+      actionview (= 4.1.2)
       mail (~> 2.5.4)
-    actionpack (4.1.2.rc1)
-      actionview (= 4.1.2.rc1)
-      activesupport (= 4.1.2.rc1)
+    actionpack (4.1.2)
+      actionview (= 4.1.2)
+      activesupport (= 4.1.2)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    actionview (4.1.2.rc1)
-      activesupport (= 4.1.2.rc1)
+    actionview (4.1.2)
+      activesupport (= 4.1.2)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    activemodel (4.1.2.rc1)
-      activesupport (= 4.1.2.rc1)
+    activemodel (4.1.2)
+      activesupport (= 4.1.2)
       builder (~> 3.1)
-    activerecord (4.1.2.rc1)
-      activemodel (= 4.1.2.rc1)
-      activesupport (= 4.1.2.rc1)
+    activerecord (4.1.2)
+      activemodel (= 4.1.2)
+      activesupport (= 4.1.2)
       arel (~> 5.0.0)
-    activesupport (4.1.2.rc1)
+    activesupport (4.1.2)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -104,12 +94,15 @@ GEM
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
-    bootstrap-sass (3.1.1.1)
+    bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
     builder (3.2.2)
+    byebug (3.1.2)
+      columnize (~> 0.8)
+      debugger-linecache (~> 1.2)
     capistrano (3.2.1)
       i18n
       rake (>= 10.0.0)
@@ -137,15 +130,8 @@ GEM
     colorize (0.7.3)
     columnize (0.8.9)
     debugger-linecache (1.2.0)
-    debugger-ruby_core_source (1.3.5)
-    diff-lcs (1.2.5)
     erubis (2.7.0)
-    execjs (2.1.0)
-    factory_girl (4.4.0)
-      activesupport (>= 3.0.0)
-    factory_girl_rails (4.4.1)
-      factory_girl (~> 4.4.0)
-      railties (>= 3.0.0)
+    execjs (2.2.1)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -154,19 +140,19 @@ GEM
     inherited_resources (1.4.1)
       has_scope (~> 0.6.0.rc)
       responders (~> 1.0.0.rc)
-    jbuilder (2.0.7)
+    jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-fileupload-rails (0.4.1)
       actionpack (>= 3.1)
       railties (>= 3.1)
-    jquery-rails (3.1.0)
+    jquery-rails (3.1.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.2.1)
       railties (>= 3.2.16)
     json (1.8.1)
-    kaminari (0.15.1)
+    kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.9.2)
@@ -175,7 +161,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    minitest (5.3.4)
+    minitest (5.3.5)
     multi_json (1.10.1)
     mysql2 (0.3.16)
     net-scp (1.2.1)
@@ -191,19 +177,19 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.1.2.rc1)
-      actionmailer (= 4.1.2.rc1)
-      actionpack (= 4.1.2.rc1)
-      actionview (= 4.1.2.rc1)
-      activemodel (= 4.1.2.rc1)
-      activerecord (= 4.1.2.rc1)
-      activesupport (= 4.1.2.rc1)
+    rails (4.1.2)
+      actionmailer (= 4.1.2)
+      actionpack (= 4.1.2)
+      actionview (= 4.1.2)
+      activemodel (= 4.1.2)
+      activerecord (= 4.1.2)
+      activesupport (= 4.1.2)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.1.2.rc1)
+      railties (= 4.1.2)
       sprockets-rails (~> 2.0)
-    railties (4.1.2.rc1)
-      actionpack (= 4.1.2.rc1)
-      activesupport (= 4.1.2.rc1)
+    railties (4.1.2)
+      actionpack (= 4.1.2)
+      activesupport (= 4.1.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
@@ -214,18 +200,6 @@ GEM
     responders (1.0.0)
       railties (>= 3.2, < 5)
     rmagick (2.13.2)
-    rspec-core (2.14.8)
-    rspec-expectations (2.14.5)
-      diff-lcs (>= 1.1.3, < 2.0)
-    rspec-mocks (2.14.6)
-    rspec-rails (2.14.2)
-      actionpack (>= 3.0)
-      activemodel (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 2.14.0)
-      rspec-expectations (~> 2.14.0)
-      rspec-mocks (~> 2.14.0)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -244,7 +218,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    sshkit (1.5.0)
+    sshkit (1.5.1)
       colorize
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -259,9 +233,9 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (2.2.2)
       coffee-rails
-    tzinfo (1.2.0)
+    tzinfo (1.2.1)
       thread_safe (~> 0.1)
-    uglifier (2.5.0)
+    uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicorn (4.8.3)
@@ -278,26 +252,24 @@ DEPENDENCIES
   activeadmin!
   activerecord-session_store!
   bootstrap-sass
+  byebug
   capistrano (~> 3.2.0)
   capistrano-bundler
   capistrano-rails
   capistrano-rvm (~> 0.1.0)
   coffee-rails (~> 4.0.0)
-  debugger!
   devise!
   execjs
-  factory_girl_rails (~> 4.4.0)
   formtastic!
-  jbuilder (~> 2.0.0)
+  jbuilder (~> 2.1.0)
   jquery-fileupload-rails
   jquery-rails
   mysql2
   paperclip (~> 4.0)
   polyamorous!
-  rails (= 4.1.2.rc1)
+  rails (= 4.1.2)
   ransack!
   rmagick
-  rspec-rails (~> 2.0)
   sass-rails (~> 4.0)
   sdoc
   therubyracer

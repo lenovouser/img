@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.2.rc1'
+gem 'rails', '4.1.2'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -25,7 +25,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.0.0'
+gem 'jbuilder', '~> 2.1.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -47,9 +47,7 @@ group :development do
 end
 
 group :development, :test do
-  gem 'debugger', github: 'klausmeyer/debugger', branch: 'support_212'
-  gem 'rspec-rails', '~> 2.0'
-  gem 'factory_girl_rails', '~> 4.4.0'
+  gem 'byebug'
 end
 
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
