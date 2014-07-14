@@ -3,16 +3,16 @@ ActiveAdmin.register Image do
   controller do
     defaults :finder => :find_by_token
   end
-  
+
   index do
     column :id
     column :created_at
     column :image do |image|
       image_tag(image.image.url(:thumb))
     end
-    default_actions
+    actions
   end
-  
+
   show do |ad|
     attributes_table do
       row :id
@@ -36,5 +36,5 @@ ActiveAdmin.register Image do
     end
     f.actions
   end
-  
+
 end
