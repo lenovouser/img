@@ -12,7 +12,7 @@ timeout 30
 
 # Listen on a Unix data socket
 #
-listen '/www/klaus-meyer.net/img/rails/current/tmp/unicorn.sock', :backlog => 2048
+listen '/www/klaus-meyer.net/img/rails/current/tmp/sockets/unicorn.sock', :backlog => 2048
 
 before_fork do |server, worker|
   ##
@@ -44,11 +44,11 @@ after_fork do |server, worker|
   # drop the workers to www:www-data
   begin
     uid, gid = Process.euid, Process.egid
-    user, group = 'www', 'www-data'
+    user, group = 'www', 'www'
     target_uid = Etc.getpwnam(user).uid
     target_gid = Etc.getgrnam(group).gid
-    worker.tmp.chown(target_uid, target_gid)
     if uid != target_uid || gid != target_gid
+      worker.tmp.chown(target_uid, target_gid)
       Process.initgroups(user, target_gid)
       Process::GID.change_privilege(target_gid)
       Process::UID.change_privilege(target_uid)

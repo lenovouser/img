@@ -42,6 +42,7 @@ group :development do
   gem 'capistrano-rvm', '~> 0.1.0'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
+  gem 'sepastian-capistrano3-unicorn', :require => false
 end
 
 group :development, :test do
