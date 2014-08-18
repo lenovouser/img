@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.4'
+gem 'rails', '4.1.5'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -60,7 +60,4 @@ gem 'execjs'
 gem 'therubyracer'
 
 gem 'devise',      github: 'plataformatec/devise'
-gem 'formtastic',  github: 'justinfrench/formtastic'
-gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
-gem 'ransack',     github: 'activerecord-hackery/ransack', branch: 'rails-4.1'
 gem 'activeadmin', github: 'gregbell/active_admin'
