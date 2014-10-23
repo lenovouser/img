@@ -13,9 +13,9 @@ set :deploy_to, APP_CONFIG['capistrano']['deploy_to']
 set :linked_files, %w(config/database.yml config/app_config.yml)
 set :linked_dirs, (fetch(:linked_dirs) || []) + %w{public/images log tmp/pids tmp/cache tmp/sockets}
 
-set :rvm_ruby_version, 'ruby-2.1.2@img'
+set :rvm_ruby_version, 'ruby-2.1.3@img'
 
-set :unicorn_bin, '/www/.rvm/gems/ruby-2.1.2@img/bin/unicorn_rails'
+set :unicorn_bin, '/www/.rvm/gems/ruby-2.1.3@img/bin/unicorn_rails'
 set :unicorn_pid, '/www/klaus-meyer.net/img/rails/shared/tmp/pids/unicorn.pid'
 
 namespace :deploy do
